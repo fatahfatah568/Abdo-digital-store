@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موارد رقمية - Digital Resources</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Arial", sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    header {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .lang-select {
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    ul {
+      text-align: right;
+      padding-right: 20px;
+    }
+
+    li {
+      font-size: 17px;
+      margin-bottom: 8px;
+      color: #444;
+    }
+
+    .price {
+      font-size: 24px;
+      color: #28a745;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .order-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 15px 30px;
+      background-color: #25d366;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .order-btn:hover {
+      background-color: #1ebe5d;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    select {
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>💻 متجر الموارد الرقمية</h1>
+  <div class="lang-select">
+    🌐 اللغة:
+    <select id="language" onchange="switchLanguage()">
+      <option value="ar">العربية</option>
+      <option value="fr">Français</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ARABIC -->
+  <div id="content-ar" dir="rtl">
+    <h2>موارد رقمية احترافية</h2>
+    <p>احصل على باقة من الموارد الرقمية المفيدة تشمل ملفات تعليمية، أدوات تصميم، وملفات قابلة للطباعة. مناسبة للطلبة، المصممين، والمسوقين الرقميين.</p>
+    <ul>
+      <li>🧠 سهلة التحميل والاستخدام</li>
+      <li>📚 بصيغ متنوعة PDF, DOC, PNG</li>
+      <li>📥 تسليم فوري بعد الدفع</li>
+    </ul>
+    <p class="price">السعر: 3 دولار فقط 💸</p>
+    <a class="order-btn" href="https://wa.me/212644328468" target="_blank">اطلب الآن عبر واتساب</a>
+  </div>
+
+  <!-- FRENCH -->
+  <div id="content-fr" style="display:none;" dir="ltr">
+    <h2>Ressources Numériques Professionnelles</h2>
+    <p>Obtenez un pack de ressources utiles : documents éducatifs, outils de design, fichiers imprimables. Parfait pour les étudiants, designers et marketeurs.</p>
+    <ul style="text-align: left;">
+      <li>🧠 Faciles à télécharger et utiliser</li>
+      <li>📚 Formats variés : PDF, DOC, PNG</li>
+      <li>📥 Livraison immédiate après paiement</li>
+    </ul>
+    <p class="price">Prix : seulement 3 $ 💸</p>
+    <a class="order-btn" href="https://wa.me/212644328468" target="_blank">Commander via WhatsApp</a>
+  </div>
+
+  <!-- ENGLISH -->
+  <div id="content-en" style="display:none;" dir="ltr">
+    <h2>Professional Digital Resources</h2>
+    <p>Get a pack of useful resources including educational files, design tools, and printable content. Perfect for students, designers, and digital marketers.</p>
+    <ul style="text-align: left;">
+      <li>🧠 Easy to download and use</li>
+      <li>📚 Formats: PDF, DOC, PNG</li>
+      <li>📥 Instant delivery after payment</li>
+    </ul>
+    <p class="price">Price: Only $3 💸</p>
+    <a class="order-btn" href="https://wa.me/212644328468" target="_blank">Order via WhatsApp</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 متجر الموارد الرقمية - جميع الحقوق محفوظة | WhatsApp: 0644328468
+</footer>
+
+<script>
+  function switchLanguage() {
+    var lang = document.getElementById('language').value;
+    document.getElementById('content-ar').style.display = 'none';
+    document.getElementById('content-fr').style.display = 'none';
+    document.getElementById('content-en').style.display = 'none';
+
+    document.getElementById('content-' + lang).style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
